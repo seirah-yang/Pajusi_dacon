@@ -1,0 +1,122 @@
+/* ================================================
+   파주시 돌봄ON 행정 챗봇 '온이(ONi)' 스타일
+   ================================================ */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f7f9fb;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 420px;
+    height: 80vh;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+h2 {
+    text-align: center;
+    color: #004d40;
+    margin: 8px 0 16px 0;
+    font-weight: 600;
+}
+
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #fafafa;
+}
+
+.user-msg,
+.bot-msg {
+    margin: 8px 0;
+    padding: 10px 12px;
+    border-radius: 12px;
+    max-width: 85%;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.user-msg {
+    background-color: #e1f5fe;
+    color: #01579b;
+    align-self: flex-end;
+}
+
+.bot-msg {
+    background-color: #f1f8e9;
+    color: #33691e;
+    align-self: flex-start;
+}
+
+.input-area {
+    display: flex;
+    margin-top: 12px;
+    gap: 6px;
+}
+
+input#user-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #cfd8dc;
+    font-size: 15px;
+    outline: none;
+}
+
+input#user-input:focus {
+    border-color: #26a69a;
+    box-shadow: 0 0 4px rgba(38, 166, 154, 0.3);
+}
+
+button {
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2bbbad;
+}
+
+#mic-btn.recording {
+    background-color: #ef5350;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 83, 80, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 83, 80, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 83, 80, 0);
+    }
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
